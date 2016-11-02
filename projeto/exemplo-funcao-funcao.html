@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    function imprimeDados(nome, calculos) {
+        console.log(nome);
+        var resultado;
+        alert(nome + ' seu resultado é ' + calculos(resultado));
+    }
+
+    var operacoes = {
+        soma : function(arg1, arg2){
+            return arg1 + arg2;
+        },
+        subtracao : function(arg1, arg2){
+            return arg1 - arg2;
+        }
+    }
+
+    imprimeDados("Baraúna", function(){
+        console.log('entro');
+        return operacoes.soma(2,2);
+    });
+
+    imprimeDados("Jose", function(){
+        console.log('entro');
+        return operacoes.subtracao(2,2);
+    });
+
+    var pTexto = document.getElementById("texto");
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <p id="texto">JavaScript: Programando na linguagem da web</p>
+    <script type="text/javascript">
+
+    var pTexto = document.getElementById("texto");
+
+    pTexto.onmouseover = function() {
+    console.log(this.textContent);
+}
+
+pTexto.onmouseover = function() {
+    console.log(this.textContent.toUpperCase());
+}
+
+
+    </script>
+</body>
+</html>
